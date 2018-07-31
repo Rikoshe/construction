@@ -3,7 +3,7 @@
 require_once "connexion.php";
 
 //db request
-$request = $bdd->prepare("INSERT INTO construction(date_creation, project_name, construction_step, step_description) VALUES(:date_creation, :project_name, :construction_step, :step_description)");
+$request = $bdd->prepare("INSERT INTO projects(date_creation, project_name, construction_step, step_description) VALUES(:date_creation, :project_name, :construction_step, :step_description)");
 $request->execute([
   "date_creation" => $_POST["date_creation"],
   "project_name" => $_POST["project_name"],

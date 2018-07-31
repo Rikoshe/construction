@@ -2,7 +2,7 @@
 //Connexion à la base de données
 require_once "connexion.php";
 //Requete la base de données
-$request = $bdd->query("SELECT id, name FROM construction");
+$request = $bdd->query("SELECT id, name FROM projects");
 
 //Extraction des informations
 $products = $request->fetchall(PDO::FETCH_ASSOC);

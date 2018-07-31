@@ -2,7 +2,7 @@
 require('controller.php');
 getDataBase();
 
-$req = $bdd->query('SELECT id, date_creation, project_name, construction_step, step_description DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM construction ORDER BY date_creation DESC LIMIT 0, 5');
+$req = $bdd->query('SELECT id, date_creation, project_name, construction_step, step_description DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM projects ORDER BY date_creation DESC LIMIT 0, 5');
 
 require('indexView.php');
 
